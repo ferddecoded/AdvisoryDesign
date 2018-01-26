@@ -1,3 +1,80 @@
 header {
-    width: 100%;
+    display: block;
 }
+
+.contactInfo figure {
+    margin: auto 0;
+}
+
+.contactInfo a {
+    margin-left: 60px;
+}
+
+.extraMargin {
+    margin-right: 30px;
+}
+
+.contact {
+    background-color: #f5f5f5;
+
+    .wrapper {
+        @extend .flex;
+        justify-content: space-between;
+    }
+
+    .contactInfo {
+        @extend .flex;
+        height: 65px;
+
+        .contactPhone,
+        .contactEmail {
+            @extend .flex;
+            margin-right: 65px;
+            height: 30px;
+        }
+
+        .contactPhone {
+            background:url(../images/phone-call.png) left center no-repeat;
+        }
+
+        .contactMail {
+            background:url(../images/mail.png) left center no-repeat;
+        }
+    }
+
+    .contactLanguage {
+        @extend .flex;
+    }
+
+    .contactPolicy {
+        @extend .flex;
+
+        .policyItem img {
+            width: 125%;
+        }
+    }
+}
+
+.companyInformation {
+    @extend .flex;
+
+    .companyLogo {
+        @extend .flex;
+
+        .companyLogo .logoHeading {
+            margin-right:10px;
+        }
+    }
+
+    .companyAddress {
+        @extend .flex;
+        .addressItem {
+            @extend .flex;
+        }
+    }
+    .companyConsultation,
+    .addressItemHolder {
+        @extend .flex;
+    }
+}
+

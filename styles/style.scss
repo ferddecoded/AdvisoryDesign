@@ -1,9 +1,50 @@
+.flex {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@import "components/normalize";
+@import "components/typography";
 @import "components/header";
 @import "components/footer";
 
 body {
-    background: red;
+    background: white;
+    font-family: 'Source Sans Pro';
+    letter-spacing: .4px;
 }
+
+img {
+    width: 100%;
+    display: inline-block;
+}
+
+.imgSml {
+    width: 28px;
+}
+
+
+figure {
+    display: inline-block;
+    margin-right: 24px;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        margin-right: 15px;
+    }
+}
+
+
 
 //Make the the partial
 //Save the partial
