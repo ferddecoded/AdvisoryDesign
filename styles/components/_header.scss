@@ -55,26 +55,45 @@ header {
     }
 }
 
-.companyInformation {
+.company .wrapper {
     @extend .flex;
 
     .companyLogo {
         @extend .flex;
 
-        .companyLogo .logoHeading {
-            margin-right:10px;
+        .logoHeading {
+            margin-right:20px;
         }
     }
 
     .companyAddress {
         @extend .flex;
+        
         .addressItem {
             @extend .flex;
+
+            .addressItemHolder {
+                margin-right: 20px;
+            }
         }
-    }
-    .companyConsultation,
-    .addressItemHolder {
-        @extend .flex;
+
     }
 }
+
+.navigation .wrapper {
+    @extend .flex;
+    background-color: #2f87fd;
+    justify-content: space-between;
+
+    .navigationMenu,
+    .navigationOptions,
+    .navigationSocial {
+        @extend .flex;
+    }
+
+}
+
+
+
+
 

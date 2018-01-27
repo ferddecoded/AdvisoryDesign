@@ -1,12 +1,21 @@
+
+//Make the the partial
+//Save the partial
+// delete the partial
+//import the partial
+//Save the style.scss
 .flex {
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 @import "components/normalize";
 @import "components/typography";
 @import "components/header";
+@import "components/banner";
+@import "components/article";
+@import "components/section";
 @import "components/footer";
 
 body {
@@ -45,9 +54,3 @@ ul {
 }
 
 
-
-//Make the the partial
-//Save the partial
-// delete the partial
-//import the partial
-//Save the style.scss

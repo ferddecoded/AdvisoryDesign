@@ -1,0 +1,10 @@
+.collabContainer {
+    @extend .flex;
+
+    .collabMenu {
+        flex-basis: 70%;
+    }
+    .collabAside {
+        flex-basis: 30%;
+    }
+}

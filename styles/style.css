@@ -1,14 +1,16 @@
 .flex, .contact .wrapper, .contact .contactInfo, .contact .contactInfo .contactPhone,
-.contact .contactInfo .contactEmail, .contact .contactLanguage, .contact .contactPolicy, .companyInformation, .companyInformation .companyLogo, .companyInformation .companyAddress, .companyInformation .companyAddress .addressItem, .companyInformation .companyConsultation,
-.companyInformation .addressItemHolder {
+.contact .contactInfo .contactEmail, .contact .contactLanguage, .contact .contactPolicy, .company .wrapper, .company .wrapper .companyLogo, .company .wrapper .companyAddress, .company .wrapper .companyAddress .addressItem, .navigation .wrapper, .navigation .wrapper .navigationMenu,
+.navigation .wrapper .navigationOptions,
+.navigation .wrapper .navigationSocial, .bannerAdvisory .wrapper, .collabContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -144,16 +146,49 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  font-size: 62.5%;
+  /* makes font 10px */ }
+
 a {
+  margin: 0;
   font-family: 'Source Sans Pro';
   color: rgba(0, 0, 0, 0.7);
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.4px;
   text-decoration: none; }
 
 h1 {
-  font-family: 'PlayfairDisplay'; }
+  margin: 0;
+  font-family: 'PlayfairDisplay';
+  color: #ffffff;
+  font-size: 7.1rem;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: left; }
+
+h6 {
+  margin: 0;
+  font-family: 'Source Sans Pro';
+  color: rgba(39, 39, 39, 0.7);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+  line-height: 26px;
+  text-align: left; }
+
+p {
+  font-family: 'Source Sans Pro';
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 26px;
+  text-align: left; }
+
+.headerWhite {
+  color: #ffffff; }
 
 header {
   display: block; }
@@ -186,8 +221,59 @@ header {
   .contact .contactPolicy .policyItem img {
     width: 125%; }
 
-.companyInformation .companyLogo .companyLogo .logoHeading {
-  margin-right: 10px; }
+.company .wrapper .companyLogo .logoHeading {
+  margin-right: 20px; }
+
+.company .wrapper .companyAddress .addressItem .addressItemHolder {
+  margin-right: 20px; }
+
+.navigation .wrapper {
+  background-color: #2f87fd;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.bannerAdvisory {
+  background-image: url(../images/paul-bence-395888.png), -webkit-gradient(linear, left top, left bottom, from(#eb01a5), to(#d13531));
+  background-image: url(../images/paul-bence-395888.png), -webkit-linear-gradient(#eb01a5, #d13531);
+  background-image: url(../images/paul-bence-395888.png), -o-linear-gradient(#eb01a5, #d13531);
+  background-image: url(../images/paul-bence-395888.png), linear-gradient(#eb01a5, #d13531);
+  height: 750px;
+  background-position: 0 -90px;
+  background-repeat: no-repeat;
+  position: relative; }
+  .bannerAdvisory::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); }
+  .bannerAdvisory .wrapper {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 750px; }
+    .bannerAdvisory .wrapper .bannerAdvisoryContent {
+      margin: auto 0;
+      padding-right: 320px; }
+
+.collabContainer .collabMenu {
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%; }
+
+.collabContainer .collabAside {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%; }
+
+.service {
+  padding-top: 50px; }
+  .service .serviceHeading {
+    text-align: center; }
 
 footer {
   width: 100%; }
