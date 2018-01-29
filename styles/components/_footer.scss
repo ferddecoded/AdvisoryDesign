@@ -1,3 +1,147 @@
 footer {
-    width: 100%;
+    background: #202020;
+
+    li a {
+        @extend .lhtGreyTxt;
+    }
+
+    a {
+        @extend .whiteTxt;
+    }
+}
+
+.partners {
+    background-color: #2f87fd;
+
+    .wrapper {
+        @extend .flex;
+        justify-content: space-between;
+
+        .partnersItem {
+            width: 25%;
+
+            .partnersItemImage {
+                padding: 60px;
+            }
+        }
+    }
+}
+
+.footerContact .wrapper {
+    position: relative;
+    top: -30px;
+    .contactInfo {
+        background-color: #313030;
+        z-index: 1;
+        @extend .flex;
+    }
+}
+
+.contactItem {
+    flex-basis: 33.33%;
+    @extend .flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+
+    .contactItemImage {
+        width: 30px; 
+    }
+
+    .contactItemImage,
+    a {
+        margin-left:30px;
+    }
+}
+
+.bottomBar {
+    @extend .flex;
+    width: 95%;
+    background-color: grey;
+    margin:0 auto;
+    height: 20px;
+    top: -20px;
+
+    .highlightBar {
+        position: relative;
+        flex-basis: 33.33%;
+    }
+}
+
+.companyFooter .wrapper {
+    @extend .flex;
+    align-items: flex-start;
+    padding: 100px 0;
+
+    .companyItem {
+        flex-basis: 33.33%;
+        padding-right: 50px;
+
+        p {
+            line-height: 32px;
+        }
+    }
+
+    .companyItem:not(:first-child) {
+        padding-left: 70px;
+    }
+
+    .companyHeading {
+        @extend .flex;
+        align-items: flex-start;
+        margin-bottom: 50px;
+
+        .companyLogoImage {
+            margin-right: 20px;
+        }
+    }
+}
+
+form {
+    @extend .flex;
+    position: relative;
+
+    input[type=email] {
+        padding: 10px;
+        border: 0;
+        background-color:
+        #313030;
+        width: 70%;
+        height: 48px;
+        color: #605d5d;
+        font-size: 1.5rem;
+    }
+
+    input[type=submit] {
+        position: absolute;
+    }
+}
+
+.companyFocus,
+.companyNews {
+    h6 {
+        margin-bottom: 60px;
+    }
+}
+
+.companyFocus {
+    li {
+        margin: 20px 0;
+    }
+}
+
+.companyNews .newsBlock {
+    margin-bottom: 50px;
+}
+
+.endFooter .wrapper {
+    @extend .flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    border-top: 1px solid #313030;
+
+    .navigationSocial {
+        @extend .flex;
+    }
+
 }

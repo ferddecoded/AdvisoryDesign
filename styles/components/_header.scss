@@ -6,16 +6,12 @@ header {
     margin: auto 0;
 }
 
-.contactInfo a {
-    margin-left: 60px;
-}
-
 .extraMargin {
     margin-right: 30px;
 }
 
 .contact {
-    background-color: #f5f5f5;
+    background-color: lightgrey;
 
     .wrapper {
         @extend .flex;
@@ -26,24 +22,40 @@ header {
         @extend .flex;
         height: 65px;
 
+        a {
+            margin-left: 25px;
+        }
+
         .contactPhone,
-        .contactEmail {
+        .contactMail {
             @extend .flex;
             margin-right: 65px;
             height: 30px;
-        }
 
-        .contactPhone {
-            background:url(../images/phone-call.png) left center no-repeat;
-        }
 
-        .contactMail {
-            background:url(../images/mail.png) left center no-repeat;
+            .contactPhoneImage {
+                width: 35px;
+            }
         }
     }
 
     .contactLanguage {
         @extend .flex;
+        margin-right: 50px;
+
+        .languageItem {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: relative;
+                width: 10px;
+                height:1px;
+                border-top: 10px solid grey;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+        }
     }
 
     .contactPolicy {
@@ -55,25 +67,37 @@ header {
     }
 }
 
-.company .wrapper {
+.companyHeader .wrapper {
     @extend .flex;
-
+    justify-content: space-between;
+    padding: 20px 0;
+    
     .companyLogo {
         @extend .flex;
+        padding-top: 20px;
+        align-items: flex-start;
 
         .logoHeading {
-            margin-right:20px;
+            margin-right:40px;
         }
     }
 
     .companyAddress {
         @extend .flex;
+        align-items: flex-start;
         
         .addressItem {
             @extend .flex;
+            align-items: flex-start;
+            margin-right: 40px;
 
             .addressItemHolder {
-                margin-right: 20px;
+                margin-right: 40px;
+            }
+
+            h6 {
+                @extend .strongTxt;
+                color: rgba(39, 39, 39, 0.7);
             }
         }
 
@@ -87,8 +111,27 @@ header {
 
     .navigationMenu,
     .navigationOptions,
-    .navigationSocial {
+    .navigationSocial,
+    .navigationContainer {
         @extend .flex;
+    }
+
+    .navigationMenu li {
+        margin: 0 20px;
+    }
+
+    .navigationOptions {
+        margin: 0 10px;
+        border-right: 1px solid #5499f7;
+        padding: 10px 0;
+
+        .navigationOptionsItem {
+            margin: 0 20px;
+        }
+    }
+
+    .navigationSocial {
+        margin: 0 20px;
     }
 
 }
