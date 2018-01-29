@@ -94,6 +94,15 @@ footer {
         .companyLogoImage {
             margin-right: 20px;
         }
+
+    }
+    
+    .companyLogo .lhtGreyTxt {
+        margin-bottom: 50px;
+    }
+
+    .companyLogo .blueTxt {
+        margin-bottom: 25px;
     }
 }
 
@@ -106,19 +115,24 @@ form {
         border: 0;
         background-color:
         #313030;
-        width: 70%;
+        width: 80%;
         height: 48px;
         color: #605d5d;
         font-size: 1.5rem;
     }
 
-    input[type=submit] {
-        position: absolute;
+    button {
+        @extend .btnBlue;
+        padding: 13px;
+        margin: 0;
+        width: 100px;
+        border-radius: 25px;
+        position: relative;
+        right: 20px;
     }
 }
 
-.companyFocus,
-.companyNews {
+.companyFocus {
     h6 {
         margin-bottom: 60px;
     }
@@ -131,7 +145,19 @@ form {
 }
 
 .companyNews .newsBlock {
-    margin-bottom: 50px;
+    padding: 50px 0;
+
+    button {
+        margin: 50px 0;
+
+        i {
+            color: #ffffff;
+        }
+    }
+}
+
+.companyNews .newsBlock:first-of-type {
+    border-bottom: 1px solid #313030;
 }
 
 .endFooter .wrapper {

@@ -1,0 +1,38 @@
+button {
+    font-family: 'Source Sans Pro';
+    color:
+    #2f87fd;
+    font-weight: 400;
+}
+
+.btnBdrBlue {
+    font-size: 1.6rem;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border: 3px solid #2f87fd;
+    background: none;
+    padding: 20px;
+}
+
+.btnBlue {
+    background-color: #2f87fd;
+    color:
+    #ffffff;
+    font-size: 1.8rem;
+    letter-spacing: 0.45px;
+    border: none;
+    padding: 20px 40px 20px 15px;
+}
+
+.btnTransparent {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.45px;
+    background: none;
+    border: none;
+    margin-bottom: 25px;
+
+    i {
+        margin-right: 15px;
+    }
+}

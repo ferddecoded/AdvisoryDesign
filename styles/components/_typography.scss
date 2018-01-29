@@ -2,14 +2,13 @@ html {
     font-size: 62.5%; /* makes font 10px */
 }
 
-.headerWhite,
-nav a,
 .whiteTxt {
     color: #ffffff;
 }
 
 .blueTxt {
     color: #2f87fd;
+    margin-bottom: 25px;
 }
 
 .strongTxt {
@@ -70,11 +69,10 @@ span {
 h3 {
     margin:0;
     font-family: PlayfairDisplay;
-    color:
-    rgba(39, 39, 39, 0.7);
     font-size: 4.5rem;
+    color:
+    #2f87fd;
     font-weight: 700;
-    line-height: 58px;
 }
 
 h4 {
@@ -91,7 +89,7 @@ h5 {
     margin: 0;
     font-family: PlayfairDisplay;
     color:
-    #2f87fd;
+    rgba(39, 39, 39, 0.7);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -125,6 +123,7 @@ p {
     font-weight: 400;
     letter-spacing: 0.4px;
     line-height: 26px;
+    margin-bottom: 25px;
 }
 
 .lrgrTxt {

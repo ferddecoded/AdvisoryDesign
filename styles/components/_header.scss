@@ -109,6 +109,15 @@ header {
     background-color: #2f87fd;
     justify-content: space-between;
 
+    li a,
+    i {
+        @extend .whiteTxt;
+    }
+
+nav.navigation {
+    padding: 10px;
+}
+
     .navigationMenu,
     .navigationOptions,
     .navigationSocial,
@@ -127,13 +136,49 @@ header {
 
         .navigationOptionsItem {
             margin: 0 20px;
+
+            a{
+                position: relative;
+
+                .purchase {
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    background: #2d71cd;
+                    border-radius: 50%;
+                    @extend .flex;
+                    justify-content: center;
+                    padding: 5px;
+                    top: 20%;
+                    left: 50%;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
         }
     }
 
     .navigationSocial {
         margin: 0 20px;
+
+        li a {
+            @extend .whiteTxt;
+        }
     }
 
+}
+
+@media (max-width: 1070px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }
 
 

@@ -2,7 +2,7 @@
 .contact .contactInfo .contactMail, .contact .contactLanguage, .contact .contactPolicy, .companyHeader .wrapper, .companyHeader .wrapper .companyLogo, .companyHeader .wrapper .companyAddress, .companyHeader .wrapper .companyAddress .addressItem, .navigation .wrapper, .navigation .wrapper .navigationMenu,
 .navigation .wrapper .navigationOptions,
 .navigation .wrapper .navigationSocial,
-.navigation .wrapper .navigationContainer, .bannerAdvisory .wrapper, .bannerStats, .bannerStatsItem:first-child, .bannerTestimonial .bannerChanger, .collabContainer, .choosingWhy, .choosingValue, .choosingValue .choosingValueItem .choosingValueHeading, .service .wrapper .serviceContainer, .project .projectText,
+.navigation .wrapper .navigationContainer, .navigation .wrapper .navigationOptions .navigationOptionsItem a .purchase, .bannerAdvisory .wrapper, .bannerAdvisory .bannerArrows, .bannerAdvisory .bannerArrows .arrows, .bannerStats, .bannerStatsItem:first-child, .bannerTestimonial .bannerChanger, .collabContainer, .choosingWhy, .choosingValue, .choosingValue .choosingValueItem .choosingValueHeading, .service .wrapper .serviceContainer, .project .projectText,
 .project .newsText,
 .news .projectText,
 .news .newsText, .project .projectContainer,
@@ -152,14 +152,13 @@ html {
   font-size: 62.5%;
   /* makes font 10px */ }
 
-.headerWhite,
-nav a,
-.whiteTxt,
-footer a {
+.whiteTxt, .navigation .wrapper li a,
+.navigation .wrapper i, .navigation .wrapper .navigationSocial li a, footer a {
   color: #ffffff; }
 
 .blueTxt {
-  color: #2f87fd; }
+  color: #2f87fd;
+  margin-bottom: 25px; }
 
 .strongTxt, .companyHeader .wrapper .companyAddress .addressItem h6 {
   font-weight: 600; }
@@ -209,10 +208,9 @@ span {
 h3 {
   margin: 0;
   font-family: PlayfairDisplay;
-  color: rgba(39, 39, 39, 0.7);
   font-size: 4.5rem;
-  font-weight: 700;
-  line-height: 58px; }
+  color: #2f87fd;
+  font-weight: 700; }
 
 h4 {
   margin: 0;
@@ -225,7 +223,7 @@ h4 {
 h5 {
   margin: 0;
   font-family: PlayfairDisplay;
-  color: #2f87fd;
+  color: rgba(39, 39, 39, 0.7);
   font-size: 2rem;
   font-weight: 700; }
 
@@ -254,11 +252,43 @@ p {
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.4px;
-  line-height: 26px; }
+  line-height: 26px;
+  margin-bottom: 25px; }
 
 .lrgrTxt {
   font-size: 2rem;
   line-height: 37px; }
+
+button {
+  font-family: 'Source Sans Pro';
+  color: #2f87fd;
+  font-weight: 400; }
+
+.btnBdrBlue {
+  font-size: 1.6rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border: 3px solid #2f87fd;
+  background: none;
+  padding: 20px; }
+
+.btnBlue, form button {
+  background-color: #2f87fd;
+  color: #ffffff;
+  font-size: 1.8rem;
+  letter-spacing: 0.45px;
+  border: none;
+  padding: 20px 40px 20px 15px; }
+
+.btnTransparent {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+  background: none;
+  border: none;
+  margin-bottom: 25px; }
+  .btnTransparent i {
+    margin-right: 15px; }
 
 header {
   display: block; }
@@ -332,6 +362,8 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  .navigation .wrapper nav.navigation {
+    padding: 10px; }
   .navigation .wrapper .navigationMenu li {
     margin: 0 20px; }
   .navigation .wrapper .navigationOptions {
@@ -340,17 +372,36 @@ header {
     padding: 10px 0; }
     .navigation .wrapper .navigationOptions .navigationOptionsItem {
       margin: 0 20px; }
+      .navigation .wrapper .navigationOptions .navigationOptionsItem a {
+        position: relative; }
+        .navigation .wrapper .navigationOptions .navigationOptionsItem a .purchase {
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          background: #2d71cd;
+          border-radius: 50%;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          padding: 5px;
+          top: 20%;
+          left: 50%; }
+          .navigation .wrapper .navigationOptions .navigationOptionsItem a .purchase p {
+            margin: 0; }
   .navigation .wrapper .navigationSocial {
     margin: 0 20px; }
 
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
 .bannerAdvisory {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/paul-bence-395888.png);
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/paul-bence-395888.png);
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/paul-bence-395888.png);
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/paul-bence-395888.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.4))), url(../images/paul-bence-395888.png);
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)), url(../images/paul-bence-395888.png);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)), url(../images/paul-bence-395888.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)), url(../images/paul-bence-395888.png);
   height: 836px;
   background-position: 0 -90px;
   background-repeat: no-repeat;
+  position: relative;
   position: relative; }
   .bannerAdvisory .wrapper {
     -webkit-box-pack: start;
@@ -364,6 +415,29 @@ header {
     .bannerAdvisory .wrapper .bannerAdvisoryContent {
       margin: auto 0;
       padding-right: 320px; }
+      .bannerAdvisory .wrapper .bannerAdvisoryContent h6 {
+        font-weight: 400;
+        line-height: 32px;
+        margin: 50px 0; }
+  .bannerAdvisory .bannerArrows {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%; }
+    .bannerAdvisory .bannerArrows .arrows {
+      height: 59px;
+      width: 59px;
+      background-color: rgba(162, 200, 252, 0.32);
+      border-radius: 50%;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .bannerAdvisory .bannerArrows .arrows i {
+        margin: auto;
+        font-size: 3.2rem;
+        color: #ffffff; }
 
 .bannerStats {
   background-color: #1f2329; }
@@ -450,13 +524,24 @@ article {
   align-items: flex-start; }
   .collabContainer .collabMain {
     -ms-flex-preferred-size: 70%;
-    flex-basis: 70%; }
+    flex-basis: 70%;
+    padding-right: 50px; }
+    .collabContainer .collabMain h3 {
+      color: rgba(39, 39, 39, 0.7);
+      padding-bottom: 25px; }
+    .collabContainer .collabMain p {
+      padding: 50px 0;
+      line-height: 36px; }
   .collabContainer .collabAside {
     -ms-flex-preferred-size: 30%;
     flex-basis: 30%;
-    background-color: lightgrey;
+    background-color: #f6f6f6;
     width: 300px;
-    padding: 25px 20px; }
+    padding: 25px 30px; }
+    .collabContainer .collabAside p {
+      padding: 25px 0;
+      letter-spacing: 0.4px;
+      line-height: 32px; }
 
 .choosingWhy {
   -webkit-box-align: start;
@@ -466,7 +551,22 @@ article {
   .choosingWhy .choosingWhyMain {
     -ms-flex-preferred-size: 65%;
     flex-basis: 65%;
-    padding-right: 20px; }
+    padding-right: 40px; }
+    .choosingWhy .choosingWhyMain h3 {
+      margin-bottom: 75px;
+      color: rgba(39, 39, 39, 0.7);
+      position: relative; }
+      .choosingWhy .choosingWhyMain h3::after {
+        content: "";
+        width: 80px;
+        border: 1px solid #2f87fd;
+        position: absolute;
+        left: 0;
+        bottom: -30px; }
+    .choosingWhy .choosingWhyMain h6 {
+      margin-bottom: 50px 0; }
+    .choosingWhy .choosingWhyMain p {
+      line-height: 36px; }
   .choosingWhy .choosingWhySmall {
     -ms-flex-preferred-size: 35%;
     flex-basis: 35%; }
@@ -496,7 +596,7 @@ article {
   .newsHeading h4 {
     position: relative;
     z-index: 1;
-    bottom: 0; }
+    bottom: 20px; }
   .serviceHeading h3,
   .serviceHeading h5,
   .projectHeading h3,
@@ -504,15 +604,37 @@ article {
   .newsHeading h3,
   .newsHeading h5 {
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    width: 33%;
+    margin: 20px auto; }
+  .serviceHeading h3::after,
+  .projectHeading h3::after,
+  .newsHeading h3::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    border-bottom: 1px solid #2f87fd;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+    bottom: -25px; }
+  .serviceHeading .projectHeading::after,
+  .projectHeading .projectHeading::after,
+  .newsHeading .projectHeading::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    border-bottom: 1px solid #2f87fd; }
 
 .projectHeading h4,
 .newsHeading h4 {
   color: lightgrey; }
 
 .service {
-  padding-top: 50px;
-  background-color: lightgrey; }
+  padding-top: 100px;
+  background-color: #f6f6f6; }
   .service .wrapper .serviceContainer {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -540,7 +662,7 @@ article {
 
 .project,
 .news {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 100px; }
   .project .projectText,
   .project .newsText,
@@ -636,6 +758,10 @@ footer {
     margin-bottom: 50px; }
     .companyFooter .wrapper .companyHeading .companyLogoImage {
       margin-right: 20px; }
+  .companyFooter .wrapper .companyLogo .lhtGreyTxt, .companyFooter .wrapper .companyLogo footer li a, footer li .companyFooter .wrapper .companyLogo a {
+    margin-bottom: 50px; }
+  .companyFooter .wrapper .companyLogo .blueTxt {
+    margin-bottom: 25px; }
 
 form {
   position: relative; }
@@ -643,22 +769,33 @@ form {
     padding: 10px;
     border: 0;
     background-color: #313030;
-    width: 70%;
+    width: 80%;
     height: 48px;
     color: #605d5d;
     font-size: 1.5rem; }
-  form input[type=submit] {
-    position: absolute; }
+  form button {
+    padding: 13px;
+    margin: 0;
+    width: 100px;
+    border-radius: 25px;
+    position: relative;
+    right: 20px; }
 
-.companyFocus h6,
-.companyNews h6 {
+.companyFocus h6 {
   margin-bottom: 60px; }
 
 .companyFocus li {
   margin: 20px 0; }
 
 .companyNews .newsBlock {
-  margin-bottom: 50px; }
+  padding: 50px 0; }
+  .companyNews .newsBlock button {
+    margin: 50px 0; }
+    .companyNews .newsBlock button i {
+      color: #ffffff; }
+
+.companyNews .newsBlock:first-of-type {
+  border-bottom: 1px solid #313030; }
 
 .endFooter .wrapper {
   -webkit-box-pack: justify;
