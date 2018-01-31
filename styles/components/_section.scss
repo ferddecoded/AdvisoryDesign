@@ -47,7 +47,8 @@
 
 .service {
     padding-top: 100px;
-    background-color: #f6f6f6;
+    background: #f6f6f6 url(../images/halfCircleRight.png) bottom right no-repeat;
+    background-size: 150px;
 
     .wrapper .serviceContainer {
         @extend .flex;
@@ -59,14 +60,14 @@
             flex-basis: calc(33.33% - (20px * 2) / 3);
             margin-right: 20px;
             background: white;
-            height: 360px;
+            height: 330px;
             padding: 45px;
             margin-bottom: 20px;
 
             .serviceTypeImage {
                 width: 55px;
                 height: 55px;
-                margin: auto;
+                margin: 20px auto;
             }
 
             h5,

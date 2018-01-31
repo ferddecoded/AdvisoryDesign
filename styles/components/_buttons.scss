@@ -12,6 +12,12 @@ button {
     border: 3px solid #2f87fd;
     background: none;
     padding: 20px;
+    transition: all .4s ease;
+
+    &:hover {
+        background-color: #2f87fd;
+        color: white;
+    }
 }
 
 .btnBlue {
@@ -22,6 +28,14 @@ button {
     letter-spacing: 0.45px;
     border: none;
     padding: 20px 40px 20px 15px;
+
+    &:hover {
+        background-color: #ffffff;
+        color: #2f87fd;
+        transition: all .4s ease;
+        border-radius: 25px;
+        border: 1px solid #2f87fd;
+    }
 }
 
 .btnTransparent {
@@ -31,8 +45,16 @@ button {
     background: none;
     border: none;
     margin-bottom: 25px;
+    transition: all .4s ease;
 
     i {
         margin-right: 15px;
+    }
+
+    &:hover {
+        background: #2f87fd;
+        color: white;
+        border-radius: 25px;
+        border: 1px solid #2f87fd;
     }
 }

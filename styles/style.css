@@ -261,7 +261,16 @@ p {
 
 /* Landscape phone to portrait tablet */
 /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+    line-height: 60px; } }
+
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  p {
+    font-size: 1.2rem; } }
+
 button {
   font-family: 'Source Sans Pro';
   color: #2f87fd;
@@ -273,7 +282,13 @@ button {
   text-transform: uppercase;
   border: 3px solid #2f87fd;
   background: none;
-  padding: 20px; }
+  padding: 20px;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease; }
+  .btnBdrBlue:hover {
+    background-color: #2f87fd;
+    color: white; }
 
 .btnBlue, form button {
   background-color: #2f87fd;
@@ -282,6 +297,14 @@ button {
   letter-spacing: 0.45px;
   border: none;
   padding: 20px 40px 20px 15px; }
+  .btnBlue:hover, form button:hover {
+    background-color: #ffffff;
+    color: #2f87fd;
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    border-radius: 25px;
+    border: 1px solid #2f87fd; }
 
 .btnTransparent {
   font-size: 18px;
@@ -289,9 +312,17 @@ button {
   letter-spacing: 0.45px;
   background: none;
   border: none;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease; }
   .btnTransparent i {
     margin-right: 15px; }
+  .btnTransparent:hover {
+    background: #2f87fd;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid #2f87fd; }
 
 .contactInfo figure {
   margin: auto 0; }
@@ -488,11 +519,6 @@ button {
     margin-bottom: 10px; } }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
-  .navigation .wrapper a.hidden {
-    display: block;
-    margin-left: 20px; } }
-
 .bannerAdvisory {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.4))), url(../images/paul-bence-395888.png);
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)), url(../images/paul-bence-395888.png);
@@ -534,11 +560,16 @@ button {
       border-radius: 50%;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
       .bannerAdvisory .bannerArrows .arrows i {
         margin: auto;
         font-size: 3.2rem;
         color: #ffffff; }
+      .bannerAdvisory .bannerArrows .arrows:hover {
+        background-color: #2f87fd; }
 
 .bannerStats {
   background-color: #1f2329; }
@@ -616,7 +647,12 @@ button {
       flex-basis: 26px;
       height: 14px;
       margin-right: 10px;
-      border-radius: 25px; }
+      border-radius: 25px;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .bannerTestimonial .bannerChanger .bannerChangerBlock:hover {
+        background-color: white; }
 
 @media (max-width: 1100px) {
   .bannerAdvisory .bannerArrows {
@@ -682,10 +718,17 @@ button {
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .bannerStatsItem .statsItemHolder {
-    max-width: 120px; } }
+    max-width: 120px; }
+  .bannerTestimonial .testimonialContainerDescription {
+    width: 100%;
+    padding: 0; } }
 
 article {
   padding-bottom: 100px; }
+
+article.collaborative {
+  background: url(../images/halfCircleLeft.png) top left no-repeat;
+  background-size: 150px; }
 
 .collabContainer {
   -webkit-box-align: start;
@@ -784,12 +827,20 @@ article {
     width: 100%;
     margin-bottom: 20px;
     margin-right: 0;
-    text-align: center; } }
+    text-align: center; }
+    .choosingValue div.choosingValueItem:hover {
+      border-left: 1px solid #2f87fd; }
+    .choosingValue div.choosingValueItem:hover h6 {
+      color: #2f87fd; } }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .collabContainer .collabAside {
     width: 80%; } }
+
+@media (max-width: 600px) {
+  .collabContainer .collabAside {
+    width: 100%; } }
 
 /* Landscape phones and down */
 .serviceHeading,
@@ -841,7 +892,8 @@ article {
 
 .service {
   padding-top: 100px;
-  background-color: #f6f6f6; }
+  background: #f6f6f6 url(../images/halfCircleRight.png) bottom right no-repeat;
+  background-size: 150px; }
   .service .wrapper .serviceContainer {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -852,13 +904,13 @@ article {
       flex-basis: calc(33.33% - (20px * 2) / 3);
       margin-right: 20px;
       background: white;
-      height: 360px;
+      height: 330px;
       padding: 45px;
       margin-bottom: 20px; }
       .service .wrapper .serviceContainer .serviceType .serviceTypeImage {
         width: 55px;
         height: 55px;
-        margin: auto; }
+        margin: 20px auto; }
       .service .wrapper .serviceContainer .serviceType h5,
       .service .wrapper .serviceContainer .serviceType p {
         margin: 20px 0; }
@@ -1101,6 +1153,9 @@ form {
   padding-top: 50px;
   border-top: 1px solid #313030; }
 
+footer li a:hover {
+  color: #2f87fd; }
+
 @media (max-width: 1100px) {
   .partners .wrapper .partnersItem {
     width: calc(50% - (30px * 1) / 2); }
@@ -1148,9 +1203,14 @@ form {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
         .companyFooter .wrapper .companyFocus.companyItem ul li {
           width: 50%; }
+      .companyFooter .wrapper .companyFocus.companyItem h6 {
+        margin-bottom: 60px; }
     .companyFooter .wrapper .companyNews.companyItem {
       padding-top: 50px;
       width: 100%;
@@ -1160,6 +1220,12 @@ form {
       text-align: left; } }
 
 /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .footerContact .wrapper .contactInfo {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; } }
+
 /* Landscape phones and down */
 body {
   background: white;
@@ -1180,7 +1246,7 @@ figure {
 .wrapper {
   max-width: 1210px;
   margin: 0 auto;
-  width: 80%; }
+  width: 75%; }
 
 ul {
   list-style: none;

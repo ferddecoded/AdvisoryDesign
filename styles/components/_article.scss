@@ -2,6 +2,11 @@ article {
     padding-bottom: 100px;
 }
 
+article.collaborative {
+    background: url(../images/halfCircleLeft.png) top left no-repeat;
+    background-size: 150px;
+}
+
 
 .collabContainer {
     @extend .flex;
@@ -137,19 +142,30 @@ article {
     }
     .choosingValue div.choosingValueItem {
         width: 100%;
-        margin-bottom: 20px;;
+        margin-bottom: 20px;
         margin-right: 0;
         text-align: center;
+
+        &:hover {
+            border-left: 1px solid #2f87fd;
+        }
+        
+        &:hover h6 {
+            color: #2f87fd;
+        }
     }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+    .collabContainer .collabAside {
+        width: 80%;
+    }
 }
 
 @media (max-width: 600px) {
     .collabContainer .collabAside {
-        width: 80%;
+        width: 100%;
     }
 }
 
