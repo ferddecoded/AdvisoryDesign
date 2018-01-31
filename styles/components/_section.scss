@@ -42,7 +42,7 @@
 
 .projectHeading h4,
 .newsHeading h4 {
-    color: lightgrey;
+    color: #f6f3f3;
 }
 
 .service {
@@ -72,6 +72,10 @@
             h5,
             p {
                 margin: 20px 0;
+            }
+
+            p {
+                line-height: 34px;
             }
 
             h5 {
@@ -109,6 +113,9 @@
         .projectImage {
             flex-basis: calc(33.33% - (20px * 2) / 3);
             margin-right: 20px;
+            min-height: 450px;
+            margin-bottom: 25px;
+            position: relative;
             
             img {
                 margin-bottom: 25px;
@@ -121,8 +128,96 @@
     }
 }
 
+.news .projectContainer .projectImage::before {
+    content:"";
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.news .projectContainer .projectImage:hover .news .projectContainer .projectImage::before {
+    display: block;
+}
 
 
+/* Landscape phone to portrait tablet */
+@media (max-width: 940px) {
+    .service .wrapper .serviceContainer .serviceType {
+        flex-basis: calc(50% - (20px * 1) / 2);
+    }
+
+    .service .wrapper .serviceContainer .serviceType:nth-child(3n) {
+        margin-right: 20px;
+    }
+
+    .service .wrapper .serviceContainer .serviceType:nth-child(2n) {
+        margin-right: 0px;
+    }
+
+    .serviceHeading,
+    .projectHeading,
+    .newsHeading {
+        text-align: center;
+        position: relative;
+        height: 180px;
+        
+        h4 {
+            position: relative;
+            z-index: 1;
+            bottom: 70px;
+        }
+
+    }
+
+    .news .projectContainer {
+        flex-direction: column;
+    }
+    
+
+    .project .projectContainer .projectImage, .news .projectContainer .projectImage {
+        flex-basis: 100%;
+        margin-right: 0;
+        min-height: 230px;
+    }
+
+    .project .projectContainer .projectImage, .news .projectContainer .projectImage:last-child {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .service .wrapper .serviceContainer .serviceType {
+        flex-basis: 100%;
+    }
+
+    .service .wrapper .serviceContainer .serviceType:nth-child(2n + 1) {
+        margin-right: 0;
+    }
+
+    .project .wrapper .projectContainer {
+        flex-direction: column;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 600px) {
+    .project .projectText,
+    .news .newsText {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}
 
 
 

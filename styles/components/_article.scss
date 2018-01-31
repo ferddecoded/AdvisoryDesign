@@ -24,13 +24,17 @@ article {
     .collabAside {
         flex-basis: 30%;
         background-color:#f6f6f6;
-        width: 300px;
         padding: 25px 30px;
 
         p {
-            padding: 25px 0;
+            margin-bottom: 30px;
             letter-spacing: 0.4px;
             line-height: 32px;
+        }
+
+        .btnTransparent {
+            padding: 0;
+            margin: 25px 0;
         }
     }
 }
@@ -80,14 +84,21 @@ article {
         flex-basis: calc(33.33% - (20px * 2) / 3);
         margin-right: 20px;
         background: white;
-        padding: 45px;
+        padding: 20px;
         border: 1px solid lightgrey;
+        height: 200px;
 
         .choosingValueHeading {
             @extend .flex;
             .valueItemImage {
                 width: 40px;
                 height: 40px;
+                margin-right: 25px;
+            }
+            margin-bottom: 25px;
+
+            h6 {
+                @extend .strongTxt;
             }
         }
     }
@@ -97,4 +108,51 @@ article {
     }
 }
 
-            
+@media (max-width: 1100px) {
+
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 940px) {
+    .collabContainer,
+    .choosingWhy {
+        flex-direction: column;
+    }
+
+    .collabContainer .collabMain {
+        margin-bottom: 100px;
+    }
+
+    .collabContainer .collabAside {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    article.choosing .wrapper .choosingWhy .choosingContainerAside {
+        margin: auto;
+    }
+
+    .choosingValue {
+        flex-direction: column;
+        
+    }
+    .choosingValue div.choosingValueItem {
+        width: 100%;
+        margin-bottom: 20px;;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px) {
+    .collabContainer .collabAside {
+        width: 80%;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+} 

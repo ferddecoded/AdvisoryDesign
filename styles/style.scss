@@ -5,7 +5,7 @@
 //import the partial
 //Save the style.scss
 .flex {
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -22,6 +22,7 @@ body {
     background: white;
     font-family: 'Source Sans Pro';
     letter-spacing: .4px;
+    transition: all .4s ease;
 }
 
 img {
@@ -35,8 +36,9 @@ figure {
 }
 
 .wrapper {
-    max-width: 1170px;
+    max-width: 1210px;
     margin: 0 auto;
+    width: 80%;
 }
 
 ul {
@@ -49,3 +51,16 @@ ul {
 }
 
 
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 940px) {
+    
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}

@@ -1,6 +1,4 @@
-header {
-    display: block;
-}
+
 
 .contactInfo figure {
     margin: auto 0;
@@ -11,7 +9,7 @@ header {
 }
 
 .contact {
-    background-color: lightgrey;
+    background-color: #f5f5f5;
 
     .wrapper {
         @extend .flex;
@@ -21,6 +19,7 @@ header {
     .contactInfo {
         @extend .flex;
         height: 65px;
+        flex-basis: 40%;
 
         a {
             margin-left: 25px;
@@ -29,7 +28,7 @@ header {
         .contactPhone,
         .contactMail {
             @extend .flex;
-            margin-right: 65px;
+            margin-right: 40px;
             height: 30px;
 
 
@@ -45,24 +44,32 @@ header {
 
         .languageItem {
             position: relative;
+            margin-left: 15%;
 
             &::after {
                 content: "";
-                position: relative;
-                width: 10px;
+                position: absolute;
                 height:1px;
-                border-top: 10px solid grey;
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
+                border-top: 5px solid grey;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                top: 50%;
+                right: -40%;
             }
         }
     }
 
     .contactPolicy {
         @extend .flex;
+        flex-basis: 40%;
+        justify-content: flex-end;
 
         .policyItem img {
             width: 125%;
+        }
+
+        .policyItem:last-child {
+            margin-right: 0;
         }
     }
 }
@@ -101,6 +108,10 @@ header {
             }
         }
 
+        .addressItem:last-child {
+            margin-right: 0;
+        }
+
     }
 }
 
@@ -113,10 +124,14 @@ header {
     i {
         @extend .whiteTxt;
     }
+    a.hidden {
+        display: none;
+    }
 
 nav.navigation {
     padding: 10px;
 }
+
 
     .navigationMenu,
     .navigationOptions,
@@ -125,8 +140,15 @@ nav.navigation {
         @extend .flex;
     }
 
-    .navigationMenu li {
-        margin: 0 20px;
+    .navigationMenu {
+
+        li {
+        margin-left: 15px;
+        }
+    }
+
+    .navigationContainer {
+        justify-content: flex-end;
     }
 
     .navigationOptions {
@@ -135,7 +157,7 @@ nav.navigation {
         padding: 10px 0;
 
         .navigationOptionsItem {
-            margin: 0 20px;
+            margin-right:20px;
 
             a{
                 position: relative;
@@ -161,8 +183,6 @@ nav.navigation {
     }
 
     .navigationSocial {
-        margin: 0 20px;
-
         li a {
             @extend .whiteTxt;
         }
@@ -170,15 +190,117 @@ nav.navigation {
 
 }
 
-@media (max-width: 1070px) {
+
+
+@media (max-width: 1170px) {
+    
+    
+    nav.navigation .navigationMenu .navigationMenuItem {
+        margin: 0 0 0 15px; 
+    }
+
+    header {
+        nav.navigation div.wrapper {
+            flex-direction: row;
+        }
+    }
+
+    .navigation .wrapper a.hidden {
+        display: block;
+        margin-left: 50px;
+    }
+
+    .navigation .wrapper .navigationMenu {
+        display: none;
+    }
+
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 940px) {
+    .contact .wrapper {
+        flex-direction: column-reverse;
+    }
+    
+    header {
+        .companyHeader .wrapper {
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-between;
+
+            .companyAddress {
+                justify-content: space-between;
+                .addressItem:last-child {
+                    flex-direction: row-reverse;
+
+                    .addressItemHolder {
+                        margin-right: 0;
+                    }
+                }
+
+                .addressItem:first-child .addressItemHolder {
+                    margin-right: 0;
+                }
+
+                .companyAddressInfo {
+                    margin-right: 40px;
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+
+    
+
+
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+
+    .contact {
+        padding: 10px 0;
+
+        .contactPolicy {
+            display: none;
+        }
+    }
+
+}
+
+@media (max-width: 635px) {
+
+    .companyAddress {
+        flex-direction: column;
+
+        .companyAddressInfo {
+            margin-right: 0;
+        }
+    }
+    
+    header .companyHeader .wrapper .companyAddress .addressItem:last-child {
+        margin-right: 30px;
+    }
+
+    header .companyHeader .wrapper .companyAddress .addressItem:first-child {
+        flex-direction: row-reverse;
+    }
+
+    .contact .contactInfo {
+        flex-direction: column;
+
+    }
+    
+    .contact .contactInfo .contactPhone, .contact .contactInfo .contactMail {
+        margin-bottom: 10px;
+    }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    .navigation .wrapper a.hidden {
+        display: block;
+        margin-left: 20px;
+    }
 }
 
 

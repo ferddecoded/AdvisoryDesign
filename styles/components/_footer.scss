@@ -16,13 +16,23 @@ footer {
     .wrapper {
         @extend .flex;
         justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 50px 0;
+        flex-wrap: wrap;
 
         .partnersItem {
-            width: 25%;
+            width: calc(25% - (30px * 3) / 4);
+            margin-right: 30px;
+            @extend .flex;
 
             .partnersItemImage {
-                padding: 60px;
+                width: 70%;
+                margin: auto;
             }
+        }
+
+        .partnersItem:last-child {
+            margin-right: 0;
         }
     }
 }
@@ -75,14 +85,15 @@ footer {
 
     .companyItem {
         flex-basis: 33.33%;
-        padding-right: 50px;
+        padding-right: 30px;
 
         p {
             line-height: 32px;
         }
     }
 
-    .companyItem:not(:first-child) {
+    .companyNews.companyItem,
+    .companyFocus.companyFocus {
         padding-left: 70px;
     }
 
@@ -170,4 +181,82 @@ form {
         @extend .flex;
     }
 
+}
+
+@media (max-width: 1100px) {
+    .partners .wrapper .partnersItem  {
+        width: calc(50% - (30px * 1) / 2);
+        
+        .partnersItemImage {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+            img {
+                width: 65%;
+            }
+        }
+        
+    }
+
+    .partners .wrapper .partnersItem:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 940px) {
+    .footerContact .wrapper .contactInfo {
+        flex-direction: column;
+
+        .contactItem {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 0;
+        }
+    }
+    
+    .companyFooter .wrapper {
+        flex-direction: column;
+
+        .companyNews.companyItem,
+        .companyFocus.companyFocus {
+            padding-left: 0px;
+        }
+
+        .companyFocus.companyItem {
+            padding-top: 50px;
+            text-align: right;
+            
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    width: 50%;
+                }
+            }
+        }
+
+        .companyNews.companyItem {
+            padding-top: 50px;
+            width: 100%;
+            text-align: right;
+        }
+
+        .companyButton {
+            width: 100%;
+            text-align: left;
+        }
+
+        
+    }
+
+    
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }
