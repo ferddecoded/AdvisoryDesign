@@ -263,5 +263,9 @@
         width: 100%;
         padding: 0;
     }
+
+    .bannerStatsItem:nth-child(3) .statsItemHolder {
+        margin-right: 75px;
+    }
 }
 

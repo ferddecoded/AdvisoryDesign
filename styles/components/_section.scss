@@ -9,7 +9,7 @@
     h4 {
         position: relative;
         z-index: 1;
-        bottom: 20px;
+        bottom: 40px;
     }
     
     h3,
@@ -61,7 +61,7 @@
             margin-right: 20px;
             background: white;
             height: 330px;
-            padding: 45px;
+            padding: 25px;
             margin-bottom: 20px;
 
             .serviceTypeImage {
@@ -114,12 +114,12 @@
         .projectImage {
             flex-basis: calc(33.33% - (20px * 2) / 3);
             margin-right: 20px;
-            min-height: 450px;
+            min-height: 470px;
             margin-bottom: 25px;
             position: relative;
             
-            img {
-                margin-bottom: 25px;
+            h6 {
+                margin-top: 25px;
             }
         }
 
@@ -129,19 +129,33 @@
     }
 }
 
-.news .projectContainer .projectImage::before {
-    content:"";
-    display: none;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    background-color: rgba(255, 255, 255, .8);
+.news .wrapper .projectContainer .projectImage .projectImageContainer {
+    position: relative;
 }
 
-.news .projectContainer .projectImage:hover .news .projectContainer .projectImage::before {
+.news .wrapper .projectContainer .projectImage .projectImageContainer .projectOverlay {
+    display: none;
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(47, 135, 253, 0.6);
+    transition: all .4s;
+
+    img {
+        width: 10%;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-49%);
+        transform: translateY(-50%);
+
+    }
+}
+
+.news .wrapper .projectContainer .projectImage .projectImageContainer:hover .projectOverlay {
     display: block;
 }
 
@@ -170,7 +184,7 @@
         h4 {
             position: relative;
             z-index: 1;
-            bottom: 70px;
+            bottom: 100px;
         }
 
     }
@@ -218,6 +232,16 @@
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    .serviceHeading,
+    .projectHeading,
+    .newsHeading {
+        height: 180px;
+        
+        h4 {
+            bottom: 110px;
+        }
+
+    }
 }
 
 

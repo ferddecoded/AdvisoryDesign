@@ -42,9 +42,13 @@
         @extend .flex;
         margin-right: 50px;
 
+        .languageImage img {
+            width: unset;
+        }
         .languageItem {
             position: relative;
             margin-left: 15%;
+
 
             &::after {
                 content: "";
@@ -212,6 +216,19 @@ nav.navigation {
 
     .navigation .wrapper .navigationMenu {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(255,255,255,0.8);
+        flex-flow: column wrap;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .navigation .wrapper .navigationMenu.open {
+            display: block;
     }
 
 }

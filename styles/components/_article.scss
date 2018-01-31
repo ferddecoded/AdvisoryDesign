@@ -41,6 +41,10 @@ article.collaborative {
             padding: 0;
             margin: 25px 0;
         }
+
+        &:hover {
+            border-right: 1px solid #2f87fd;
+        }
     }
 }
 
@@ -171,4 +175,7 @@ article.collaborative {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    .choosingContainerAside {
+        margin-top: 25px;
+    }
 } 
